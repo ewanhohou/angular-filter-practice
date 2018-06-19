@@ -57,7 +57,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   filterData(key, value) {
     if (this.copyData) {
       this.copyData = this.copyData.filter(res => {
-        return res[key].match(value);
+        return res[key].includes(value);
       });
     }
   }
